@@ -4,8 +4,14 @@
 
 plugins {
     id 'com.hillert.coherence.pof.java-library-conventions'
+    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
 }
 
 dependencies {
     api project(':list')
+    implementation('com.oracle.coherence.ce:coherence:23.09');
+}
+
+compileTestJava {
+    dependsOn('coherencePof')
 }

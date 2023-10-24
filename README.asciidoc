@@ -108,9 +108,67 @@ compileTestJava {
 }
 ----
 
-`24.03-SNAPSHOT` contains a regression. By default `compileTestJava` should depend on `coherencePof` but this is not
-the case right. Therefore, we need to add the `dependsOn` line explicitly.
+NOTE: `24.03-SNAPSHOT` contains a regression. By default `compileTestJava` should depend on `coherencePof` but this is not
+the case right now. Therefore, we need to add the `dependsOn` line explicitly.
 
 === To Utilities module
 
-TBD
+Let's decide to add the Coherence POF plugin to the `utilities` module instead, as we decide to keep our POF annotated
+classes in the `utilities` module. Therefore, move the Coherence POF plugin declaration to `./utilities/build.gradle`:
+
+.build.gradle (app module)
+[source,groovy,indent=0]
+----
+plugins {
+    id 'com.hillert.coherence.pof.java-application-conventions'
+    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
+}
+
+dependencies {
+    api project(':list')
+    implementation('com.oracle.coherence.ce:coherence:23.09');
+}
+
+compileTestJava {
+    dependsOn('coherencePof')
+}
+----
+
+We will also add a dependency on the Coherence library to the `utilities` module. Next we will add a basic POF annotated
+class to the `utilities` module:
+
+.PofClass.java (utilities module)
+[source,java,indent=0]
+----
+package com.hillert.coherence.pof.utilities;
+
+import com.tangosol.io.pof.schema.annotation.PortableType;
+
+@PortableType(id=1000)
+public class PofClass {
+	private String name;
+
+	public PofClass(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+}
+----
+
+One thing that is missing is a dependency on the `utilities` module's `coherencePof` from the `app` module. Add the following to
+`./app/build.gradle`:
+
+.build.gradle (app module)
+[source,groovy,indent=0]
+----
+compileJava {
+    dependsOn(':utilities:coherencePof')
+}
+----
+
+NOTE: `24.03-SNAPSHOT` contains a regression in this regard. By default, a child module with a `compileJava` should
+automatically depend on `coherencePof` but this is not the case right now. Therefore, we need to add the `dependsOn` line
+explicitly.
