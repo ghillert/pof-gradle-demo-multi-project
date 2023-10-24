@@ -8,6 +8,8 @@ As a starting point we use the Gradle `init` task to create a multi-project buil
 https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html[Building Java Applications with libraries Sample]
 in the Gradle documentation.
 
+== Create Gradle Project Structure
+
 [source,bash,indent=0]
 ----
 gradle init
@@ -67,3 +69,48 @@ Enter target version of Java (min. 7) (default: 21): 21
 ----
 Generate build using new APIs and behavior (some features may change in the next minor release)? (default: no) [yes, no] no
 ----
+
+== Add Coherence POF Plugin
+
+=== To App module
+
+We will use a snapshot version of the Coherence POF plugin. To do this we need to add the Sonatype snapshot repository to
+`settings.gradle` in the root of the project.
+
+.settings.gradle (root)
+[source,groovy,indent=0]
+----
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+        gradlePluginPortal()
+    }
+}
+----
+
+Now we can add the Coherence POF plugin to the `app` module. In `./app/build.gradle` add the following:
+
+.build.gradle (app module)
+[source,groovy,indent=0]
+----
+plugins {
+    id 'com.hillert.coherence.pof.java-application-conventions'
+    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
+}
+
+...
+
+compileTestJava {
+    dependsOn('coherencePof')
+}
+----
+
+`24.03-SNAPSHOT` contains a regression. By default `compileTestJava` should depend on `coherencePof` but this is not
+the case right. Therefore, we need to add the `dependsOn` line explicitly.
+
+=== To Utilities module
+
+TBD

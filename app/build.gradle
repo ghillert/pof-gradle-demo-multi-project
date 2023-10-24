@@ -4,6 +4,7 @@
 
 plugins {
     id 'com.hillert.coherence.pof.java-application-conventions'
+    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
 }
 
 dependencies {
@@ -14,4 +15,8 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass = 'com.hillert.coherence.pof.app.App'
+}
+
+compileTestJava {
+    dependsOn('coherencePof')
 }
