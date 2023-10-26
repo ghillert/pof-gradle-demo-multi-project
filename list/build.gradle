@@ -4,4 +4,10 @@
 
 plugins {
     id 'com.hillert.coherence.pof.java-library-conventions'
+    id 'jacoco'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport // report is always generated after tests run
 }

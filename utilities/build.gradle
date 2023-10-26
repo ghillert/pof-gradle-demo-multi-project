@@ -5,6 +5,7 @@
 plugins {
     id 'com.hillert.coherence.pof.java-library-conventions'
     id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
+    id 'jacoco'
 }
 
 dependencies {
@@ -14,4 +15,9 @@ dependencies {
 
 compileTestJava {
     dependsOn('coherencePof')
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport // report is always generated after tests run
 }
