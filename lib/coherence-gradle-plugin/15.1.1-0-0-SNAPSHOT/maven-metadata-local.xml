@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.oracle.coherence</groupId>
+  <artifactId>coherence-gradle-plugin</artifactId>
+  <versioning>
+    <lastUpdated>20231106075147</lastUpdated>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>15.1.1-0-0-SNAPSHOT</value>
+        <updated>20231106075147</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>15.1.1-0-0-SNAPSHOT</value>
+        <updated>20231106075147</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>15.1.1-0-0-SNAPSHOT</value>
+        <updated>20231106075147</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>15.1.1-0-0-SNAPSHOT</version>
+</metadata>

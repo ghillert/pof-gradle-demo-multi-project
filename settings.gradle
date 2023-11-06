@@ -9,7 +9,7 @@ pluginManagement {
     repositories {
         mavenLocal()
         maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+            url uri("file://lib/")
         }
         gradlePluginPortal()
     }

@@ -4,7 +4,8 @@
 
 plugins {
     id 'com.hillert.coherence.pof.java-library-conventions'
-    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
+//    id 'com.oracle.coherence.ce' version '24.03-SNAPSHOT'
+    id 'com.oracle.coherence' version '15.1.1-0-0-SNAPSHOT'
     id 'jacoco'
 }
 
@@ -13,9 +14,9 @@ dependencies {
     implementation('com.oracle.coherence.ce:coherence:23.09');
 }
 
-compileTestJava {
-    dependsOn('coherencePof')
-}
+//compileTestJava {
+//    dependsOn('coherencePof')
+//}
 
 test {
     useJUnitPlatform()
