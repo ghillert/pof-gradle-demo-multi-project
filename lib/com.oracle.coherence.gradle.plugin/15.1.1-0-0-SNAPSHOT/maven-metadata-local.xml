@@ -3,7 +3,7 @@
   <groupId>com.oracle.coherence</groupId>
   <artifactId>com.oracle.coherence.gradle.plugin</artifactId>
   <versioning>
-    <lastUpdated>20231106075147</lastUpdated>
+    <lastUpdated>20231130094318</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
@@ -11,7 +11,7 @@
       <snapshotVersion>
         <extension>pom</extension>
         <value>15.1.1-0-0-SNAPSHOT</value>
-        <updated>20231106075147</updated>
+        <updated>20231130094318</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

@@ -3,25 +3,25 @@
   <groupId>com.oracle.coherence</groupId>
   <artifactId>coherence-gradle-plugin</artifactId>
   <versioning>
-    <lastUpdated>20231106075147</lastUpdated>
+    <lastUpdated>20231130094318</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <extension>jar</extension>
+        <extension>pom</extension>
         <value>15.1.1-0-0-SNAPSHOT</value>
-        <updated>20231106075147</updated>
+        <updated>20231130094318</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>module</extension>
         <value>15.1.1-0-0-SNAPSHOT</value>
-        <updated>20231106075147</updated>
+        <updated>20231130094318</updated>
       </snapshotVersion>
       <snapshotVersion>
-        <extension>pom</extension>
+        <extension>jar</extension>
         <value>15.1.1-0-0-SNAPSHOT</value>
-        <updated>20231106075147</updated>
+        <updated>20231130094318</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
