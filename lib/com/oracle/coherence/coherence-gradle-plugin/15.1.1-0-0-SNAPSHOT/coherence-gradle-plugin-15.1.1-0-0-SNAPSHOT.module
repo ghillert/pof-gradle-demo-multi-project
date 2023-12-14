@@ -27,11 +27,11 @@
         {
           "name": "coherence-gradle-plugin-15.1.1-0-0-SNAPSHOT.jar",
           "url": "coherence-gradle-plugin-15.1.1-0-0-SNAPSHOT.jar",
-          "size": 18636,
-          "sha512": "924546654807cfdec571333e177ee1f9579aafd3ed968dc84dfd4e6448154e66e34dc03dc214524a80693b4b22b0d6fd9dabc6f15715be6154fa6eb935468b68",
-          "sha256": "281d9e6d9980cc62de14ef9c89cb5caa93d1ca1e4a249b2c78cda35f1829c78f",
-          "sha1": "aef2b908c2e0da0ba4ca309cfaab3348af7e9741",
-          "md5": "d3bf6d1ea7802bb3e5d5c966921a9a48"
+          "size": 18730,
+          "sha512": "730ea44daf661065f40fc25ef1fe88b5174fb83d219e47e793be318ff3e1fda25b6510b752a2738924e6223d7867dbf82899797a0a2fa23b61f4a6d2e097738d",
+          "sha256": "5ba67687552f32c643f7b5d248dc35cfde1f406954c6043f9054230d05b7772e",
+          "sha1": "71ea0e322795bb0da3585ef39c8d0e807494e740",
+          "md5": "8a32761f5a46d717d814661022acda8d"
         }
       ]
     },
@@ -57,11 +57,11 @@
         {
           "name": "coherence-gradle-plugin-15.1.1-0-0-SNAPSHOT.jar",
           "url": "coherence-gradle-plugin-15.1.1-0-0-SNAPSHOT.jar",
-          "size": 18636,
-          "sha512": "924546654807cfdec571333e177ee1f9579aafd3ed968dc84dfd4e6448154e66e34dc03dc214524a80693b4b22b0d6fd9dabc6f15715be6154fa6eb935468b68",
-          "sha256": "281d9e6d9980cc62de14ef9c89cb5caa93d1ca1e4a249b2c78cda35f1829c78f",
-          "sha1": "aef2b908c2e0da0ba4ca309cfaab3348af7e9741",
-          "md5": "d3bf6d1ea7802bb3e5d5c966921a9a48"
+          "size": 18730,
+          "sha512": "730ea44daf661065f40fc25ef1fe88b5174fb83d219e47e793be318ff3e1fda25b6510b752a2738924e6223d7867dbf82899797a0a2fa23b61f4a6d2e097738d",
+          "sha256": "5ba67687552f32c643f7b5d248dc35cfde1f406954c6043f9054230d05b7772e",
+          "sha1": "71ea0e322795bb0da3585ef39c8d0e807494e740",
+          "md5": "8a32761f5a46d717d814661022acda8d"
         }
       ]
     }

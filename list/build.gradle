@@ -4,7 +4,12 @@
 
 plugins {
     id 'com.hillert.coherence.pof.java-library-conventions'
+    id 'com.oracle.coherence' version '15.1.1-0-0-SNAPSHOT'
     id 'jacoco'
+}
+
+dependencies {
+    implementation('com.oracle.coherence.ce:coherence:23.09');
 }
 
 test {
