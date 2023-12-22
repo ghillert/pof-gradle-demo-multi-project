@@ -14,11 +14,12 @@ dependencies {
     implementation('com.oracle.coherence.ce:coherence:23.09');
 }
 
-//compileTestJava {
-//    dependsOn('coherencePof')
-//}
-
 test {
     useJUnitPlatform()
     finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+coherencePof {
+    usePofSchemaXml = true
+    pofSchemaXmlPath = "foobar/my-pof-schema.xml"
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<schema xmlns="http://xmlns.oracle.com/coherence/schema"
+        xmlns:java="http://xmlns.oracle.com/coherence/schema/java"
+        external="true">
+
+    <type name="FooInterface">
+        <java:type name="com.hillert.coherence.pof.list.FooInterface"/>
+    </type>
+
+</schema>

@@ -1,6 +1,7 @@
 package com.hillert.coherence.pof.utilities;
 
 import com.hillert.coherence.pof.list.FooClass;
+import com.hillert.coherence.pof.list.FooInterface;
 import com.tangosol.io.pof.schema.annotation.PortableMap;
 import com.tangosol.io.pof.schema.annotation.PortableType;
 
@@ -19,5 +20,5 @@ public class PofClass {
 	}
 
 	@PortableMap(since=1)
-	private HashMap<Long, FooClass> aliases = new HashMap<>();
+	private HashMap<Long, FooInterface> aliases = new HashMap<>();
 }
